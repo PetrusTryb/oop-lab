@@ -2,6 +2,7 @@
 class Prostokat : public FiguraPlaska {
 private:
 	double a, b;
+	static int inst;
 protected:
 	void Wypisz(std::ostream& out) const override;
 public:

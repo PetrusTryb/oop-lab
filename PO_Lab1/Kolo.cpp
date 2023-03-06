@@ -10,7 +10,7 @@ void Kolo::Wypisz(std::ostream& out) const
 
 Kolo::Kolo(double r) : r(r)
 {
-	std::cout << "Konstruktor kola(" << r << ")\n";
+	std::cout << "Konstruktor kola(" << r << ")\nLiczba figur: "<<overallFigCount<<"\nLiczba kol: "<<++inst<<std::endl;
 }
 
 double Kolo::GetR() const
@@ -35,5 +35,7 @@ double Kolo::Pole()
 
 Kolo::~Kolo()
 {
-	std::cout << "Destruktor kola(" << r << ")\n";
+	std::cout << "Destruktor kola(" << r << ")\nLiczba figur: " << overallFigCount-1 << "\nLiczba kol: " << --inst << std::endl;
 }
+
+int Kolo::inst = 0;

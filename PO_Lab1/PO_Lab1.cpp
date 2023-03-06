@@ -1,4 +1,5 @@
-﻿#include "Prostokat.h"
+﻿#include "FiguraPlaska.h"
+#include "Prostokat.h"
 #include "Trojkat.h"
 #include "Kolo.h"
 #include "SeparatorZadania.h"
@@ -66,11 +67,19 @@ void zad3c() {
 	cout << s2;
 }
 
+void zadMod() {
+	cout << "\nMODYFIKACJA\n";
+	Kolo k1(1);
+	Trojkat t1(3, 4, 5), t2(5, 6, 7);
+	Prostokat p1(1, 2), p2(3, 4), p3(5, 6);
+}
+
 int main()
 {
 	zad3a();
 	zad3b();
 	zad3c();
+	zadMod();
 	
 	return 0;
 }

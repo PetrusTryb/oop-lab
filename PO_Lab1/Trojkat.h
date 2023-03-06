@@ -1,6 +1,8 @@
 #pragma once
 #include "FiguraPlaska.h"
 class Trojkat : public FiguraPlaska {
+private:
+	static int inst;
 	double a, b, c;
 protected:
 	void Wypisz(std::ostream& out) const override;
@@ -16,5 +18,4 @@ public:
 	double Pole() override;
 
 	~Trojkat() override;
-private:
 };

@@ -1,6 +1,8 @@
 #pragma once
 #include "FiguraPlaska.h"
 class Kolo : public FiguraPlaska {
+private:
+	static int inst;
 	double r;
 protected:
 	void Wypisz(std::ostream& out) const override;
@@ -12,5 +14,4 @@ public:
 	double Pole() override;
 
 	~Kolo() override;
-private:
 };
