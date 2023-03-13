@@ -70,11 +70,9 @@ Library& Library::operator=(Library&& right)
 {
 	debug("Library& Library::operator=(Library&& right)");
 	if (this != &right)
-	{
-		delete[] books;
-		size = right.size;
-		books = std::exchange(right.books, nullptr);
-		right.size = 0;
+	{
+		std::swap(right.books,books);
+  std::swap(right.size,size);
 	}
 	return *this;
 }
