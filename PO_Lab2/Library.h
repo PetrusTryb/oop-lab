@@ -18,4 +18,5 @@ public:
 	const Book& operator[](std::size_t index) const;
 	std::size_t GetSize() const;
 	~Library();
+	void swapBooksWith(Library& library);
 };

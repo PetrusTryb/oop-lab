@@ -1,7 +1,4 @@
-﻿#define _CRTDBG_MAP_ALLOC
-#include <stdlib.h>
-#include <crtdbg.h>
-#include <iostream>
+﻿#include <iostream>
 #include "Book.h"
 #include "Library.h"
 using namespace std;
@@ -42,12 +39,21 @@ void zad2() {
     cout << "l1: " << l1 << " e: " << e << endl;
 }
 
+void zad3() {
+    Library l1 = { {"Autor1_1", "Tytul1_1"},{"Autor1_2", "Tytul1_2"},{"Autor1_3","Tytul1_3"}};
+    Library l2 = { {"Autor2_1", "Tytul2_1"},{"Autor2_2", "Tytul2_2"} };
+    cout << l1 << endl << l2 << endl;
+    l1.swapBooksWith(l2);
+    cout << l1 << endl << l2 << endl;
+}
+
 int main()
 {
     cout << "***ZADANIE 1***\n";
     zad1();
     cout << "***ZADANIE 2***\n";
     zad2();
-    _CrtDumpMemoryLeaks();
+    cout << "***MODYFIKACJA***\n";
+    zad3();
     return 0;
 }

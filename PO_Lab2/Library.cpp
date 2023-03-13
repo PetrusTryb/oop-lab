@@ -106,6 +106,13 @@ std::ostream& operator<<(std::ostream& out, const Library& library)
 	{
 		out << library.books[i] << ", ";
 	}
-	out << "]";
+	out << "], size = "<<library.size;
 	return out;
+}
+
+void Library::swapBooksWith(Library& library)
+{
+	debug("Library::swapBooksWith(Library& library)");
+	std::swap(books, library.books);
+	std::swap(size, library.size);
 }
