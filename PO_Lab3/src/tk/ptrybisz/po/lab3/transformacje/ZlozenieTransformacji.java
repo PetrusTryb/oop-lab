@@ -22,7 +22,7 @@ public class ZlozenieTransformacji implements Transformacja
         Transformacja[] odwrotnosci = new Transformacja[transformacje.length];
         for (int i = 0; i < transformacje.length; i++)
         {
-            odwrotnosci[i] = transformacje[i].getTransformacjaOdwrotna();
+            odwrotnosci[transformacje.length-1-i] = transformacje[i].getTransformacjaOdwrotna();
         }
         return new ZlozenieTransformacji(odwrotnosci);
     }
