@@ -12,6 +12,12 @@ public class Obrot implements Transformacja {
                 p.getX() * Math.sin(Math.toRadians(kat)) + p.getY() * Math.cos(Math.toRadians(kat))
         );
     }
+
+    @Override
+    public Trojkat transformuj(Trojkat t) throws NieMoznaZbudowacTrojkataException {
+        return new Trojkat(transformuj(t.getA()),transformuj(t.getB()),transformuj(t.getC()));
+    }
+
     @Override
     public Transformacja getTransformacjaOdwrotna() {
         return new Obrot(-kat);

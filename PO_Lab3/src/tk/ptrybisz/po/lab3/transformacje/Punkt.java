@@ -14,8 +14,8 @@ public class Punkt {
     }
     @Override
     public boolean equals(Object obj) {
-        if(obj instanceof Punkt p) {
-            return x == p.x && y == p.y;
+        if(obj instanceof Punkt) {
+            return x == ((Punkt) obj).x && y == ((Punkt) obj).y;
         }
         return false;
     }

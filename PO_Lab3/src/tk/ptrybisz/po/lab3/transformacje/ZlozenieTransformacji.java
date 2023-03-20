@@ -10,12 +10,22 @@ public class ZlozenieTransformacji implements Transformacja
     @Override
     public Punkt transformuj(Punkt p)
     {
-        for (Transformacja t : transformacje)
+        for (Transformacja tr : transformacje)
         {
-            p = t.transformuj(p);
+            p = tr.transformuj(p);
         }
         return p;
     }
+
+    @Override
+    public Trojkat transformuj(Trojkat t) throws NieMoznaZbudowacTrojkataException {
+        for (Transformacja tr : transformacje)
+        {
+            t = tr.transformuj(t);
+        }
+        return t;
+    }
+
     @Override
     public Transformacja getTransformacjaOdwrotna() throws BrakTransformacjiOdwrotnejException
     {

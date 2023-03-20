@@ -14,6 +14,12 @@ public class Translacja implements Transformacja{
     public Punkt transformuj(Punkt p) {
         return new Punkt(p.getX() + dX, p.getY() + dY);
     }
+
+    @Override
+    public Trojkat transformuj(Trojkat t) throws NieMoznaZbudowacTrojkataException {
+        return new Trojkat(transformuj(t.getA()),transformuj(t.getB()),transformuj(t.getC()));
+    }
+
     public double getdX() {
         return dX;
     }

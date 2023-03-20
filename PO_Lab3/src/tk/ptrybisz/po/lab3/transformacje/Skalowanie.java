@@ -17,6 +17,12 @@ public class Skalowanie implements Transformacja{
     public Punkt transformuj(Punkt p) {
         return new Punkt(skalaX * p.getX(), skalaY * p.getY());
     }
+
+    @Override
+    public Trojkat transformuj(Trojkat t) throws NieMoznaZbudowacTrojkataException {
+        return new Trojkat(transformuj(t.getA()),transformuj(t.getB()),transformuj(t.getC()));
+    }
+
     public double getSkalaX() {
         return skalaX;
     }
